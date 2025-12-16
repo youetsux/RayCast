@@ -42,7 +42,7 @@ public:
 	void InitIndex(FbxMesh* mesh);
 	void InitConstantBuffer();
 	void InitMaterial(FbxNode* pNode);
-
+	void RayCast(RayCastData& rayData);
 private:
 	struct MATERIAL
 	{
@@ -80,6 +80,6 @@ private:
 	std::vector<std::vector<int>> ppIndex_; //マテリアルごとのインデックスデータ [material][index]
 	//auto& arr = ppIndex_[1];
 	//arr[0]~arr[index - 1];
-	void RayCast(RayCastData& rayData);
+
 };
 
