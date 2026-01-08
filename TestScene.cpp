@@ -19,10 +19,10 @@ void TestScene::Initialize()
 
 void TestScene::Update()
 {
-	if (Input::IsKeyDown(DIK_SPACE)) {
-		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
-		pSceneManager->ChangeScene(SCENE_ID_PLAY);
-	}
+	//if (Input::IsKeyDown(DIK_SPACE)) {
+	//	SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+	//	pSceneManager->ChangeScene(SCENE_ID_PLAY);
+	//}
 	//スペースキー押したら 
 	// SceneManager::ChangeScene(SCENE_ID_PLAY); を呼び出してね
 }

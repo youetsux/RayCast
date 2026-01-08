@@ -1,5 +1,7 @@
 #pragma once
 #include "Engine\\GameObject.h"
+#include <windows.h>
+
 
 namespace
 {
@@ -37,8 +39,13 @@ public:
 	void Update() override;
 	void Draw()override;
 	void Release()override;
+	BOOL localProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+	//操作パネル用プロシージャ
+	BOOL manuProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 private:
 	sData sTable[ZSIZE][XSIZE];
 	int hModel[MODEL_NUM];
+	int mode_; //０：上げる　１：下げる　２：種類変更
+	int select_; //ボックスの種類
 };
 
